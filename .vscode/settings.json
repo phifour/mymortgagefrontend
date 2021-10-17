@@ -1,0 +1,4 @@
+{
+    "appService.deploySubpath": ".",
+    "appService.defaultWebAppToDeploy": "/subscriptions/b0581250-551b-4284-bb8d-8a3a18021af3/resourceGroups/qfinancelab/providers/Microsoft.Web/sites/myloanfrontend"
+}
