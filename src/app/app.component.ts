@@ -23,7 +23,7 @@ export class AppComponent {
     total_interest_paid:0,
     total_tax_paid:0,
     r:3,
-    t:10,
+    t:30,
     rate:-1,
     rate_monthly:-1
   };
@@ -32,7 +32,7 @@ export class AppComponent {
 
   lineChartData: ChartDataSets[] = [
     { data: [], label: 'Remaining Balance' },
-    { data: [], label: 'Interest' },
+    { data: [], label: 'Interest Balance' },
 
   ];
 
@@ -56,7 +56,7 @@ export class AppComponent {
 
 
   change() {
-    console.log('change',this.loan.facevalue);
+    // console.log('change',this.loan.facevalue);
 
     this.loan['downpayment'] = this.loan['facevalue']*0.2;
 
@@ -79,13 +79,12 @@ export class AppComponent {
       for (let entry of this.cashflow_table) {
         console.log('entry',entry); // 1, "string", false
         this.lineChartData[0]['data'].push(entry.balance);
-        this.lineChartData[1]['data'].push(entry.interest);
+        this.lineChartData[1]['data'].push(entry.interest_balance);
 
       }
 
       this.doughnutChartData = [[ this.loan['facevalue']-this.loan['downpayment'], this.loan['total_interest_paid'], 0]];
 
-      // console.log('data[cashflow_table]', data['cashflow_table'][0].balance);
 
 
     }) ;

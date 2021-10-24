@@ -9,8 +9,8 @@ export class DataServiceService {
 
   // private REST_API_SERVER = 'https://fastapiloan.azurewebsites.net/loan/';
 
-  //private REST_API_SERVER = 'http://127.0.0.1:5000/loan/';
-  private REST_API_SERVER = 'https://mymortgagecalcengine.azurewebsites.net/loan/';
+  private REST_API_SERVER = 'http://127.0.0.1:5000/loan/';
+  // private REST_API_SERVER = 'https://mymortgagecalcengine.azurewebsites.net/loan/';
 
 
   constructor(private httpClient: HttpClient) {
